@@ -201,6 +201,8 @@ class RecipeResource(Resource) :
         # body 에 들어있는 json 데이터.
         data = request.get_json()
 
+        user_id = get_jwt_identity()
+
         # 레시피 테이블의 아이디가 저장되어있는 변수 : recipe_id
 
         # 2. DB 레시피 테이블을 업데이트 한다. 
